@@ -144,11 +144,29 @@ html, body{
         width: 90%;
         margin-top: 5vw;
         margin-bottom: 6vw;
+    }.nav-part2 {
+        display: none; /* Initially hide */
+        flex-direction: column; /* Stack items vertically when visible */
+        background-color: white; /* Optional for better visibility */
+        position: absolute;
+        top: 60px; /* Below the nav */
+        right: 0;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        z-index: 100;
     }
+
+    .nav-part2 h4, .nav-part2 button {
+        padding: 10px 20px;
+        text-align: center;
+    }
+
     .content button{
         padding: 3vw 6vw;
         font-size: 3.5vw;
         border-radius: 3px;
         font-weight: 600;
     }
+
 }

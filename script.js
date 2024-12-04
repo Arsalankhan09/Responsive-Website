@@ -62,3 +62,17 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     };
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const menuIcon = document.querySelector(".ri-menu-3-fill");
+    const navLinks = document.querySelector(".nav-part2");
+
+    menuIcon.onclick = () => {
+        // Toggle visibility of the navigation menu
+        if (navLinks.style.display === "flex") {
+            navLinks.style.display = "none";
+        } else {
+            navLinks.style.display = "flex";
+        }
+    };
+});
+
