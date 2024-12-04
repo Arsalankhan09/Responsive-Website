@@ -1,21 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gilroy';
 }
 
-html, body{
+html, body {
     height: 100%;
     width: 100%;
-
 }
-.main{
+
+.main {
     height: 100%;
     width: 100%;
     position: relative;
 }
-.nav{
+
+.nav {
     height: 100px;
     width: 100%;
     display: flex;
@@ -24,56 +25,61 @@ html, body{
     padding: 0 4vw;
     border: 2px solid #dadada;
 }
-.nav button{
+
+.nav button {
     font-size: 1vw;
     padding: 0.7vw 1.4vw;
     background-color: teal;
-    color:#dadada;
+    color: #dadada;
     border: none;
     border-radius: 2.5px;
     font-weight: 600;
 }
-.nav-part2{
+
+.nav-part2 {
     display: flex;
     align-items: center;
     gap: 4vw;
-
 }
-.nav h2{
+
+.nav h2 {
     font-size: 1.8vw;
     font-weight: 700;
 }
-.nav h4{
+
+.nav h4 {
     font-size: 1.1vw;
 }
 
-.nav i{
+.nav i {
     font-size: 1.6vw;
     font-weight: 800;
     display: none;
-} 
-.content{
-    height:calc(100% - 100px);
+}
+
+.content {
+    height: calc(100% - 100px);
     width: 100%;
     display: flex;
     position: relative;
-
 }
 
-.left{
+.left {
     height: 100%;
     width: 45%;
     padding: 5vh 4vw;
 }
 
-.left h1{
+.left h1 {
     font-size: 4.2vw;
     line-height: 4.4vw;
 }
-.left h1 span{
+
+.left h1 span {
     color: #ff735c;
 }
-.left p{
+
+.left p {
     font-size: 1.2vw;
     font-weight: 600;
     color: #666;
@@ -81,92 +87,149 @@ html, body{
     margin-top: 1.5vw;
     margin-bottom: 3vw;
 }
-.content button{
+
+.content button {
     font-size: 1.2vw;
     padding: 1.1vw 2.1vw;
     background-color: #ff735c;
-    color:#dadada;
+    color: #dadada;
     border: none;
     border-radius: 2.5px;
     font-weight: 700;
-
 }
-.right{
+
+.right {
     height: 100%;
     width: 55%;
 }
-.right img {
-    max-width: 100%; 
-    max-height: 100%; 
-    object-fit: contain; 
-    border-radius: 10px;
-} 
-@media (max-width:600px) {
-    .nav{
 
+.right img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 600px) {
+    .nav {
         padding: 0 5vw;
         height: 60px;
     }
-    .nav button{
+
+    .nav button {
         display: none;
     }
-    
-    .nav h2{
+
+    .nav h2 {
         font-size: 5.1vw;
     }
-    .nav h4{
+
+    .nav h4 {
         font-size: 4vw;
         display: none;
     }
-    .nav i{
+
+    .nav i {
         display: block;
         font-size: 6vw;
     }
-    .content{
+
+    .content {
         height: calc(100% - 60px);
         flex-direction: column;
     }
-    .left{
+
+    .left {
         width: 100%;
         height: 50%;
         padding: 4vw 6vw;
     }
-    .right{
+
+    .right {
         width: 100%;
         height: 50%;
     }
-    .left h1{
+
+    .left h1 {
         font-size: 10vw;
         line-height: 11vw;
     }
-    .left p{
+
+    .left p {
         font-size: 3vw;
         width: 90%;
         margin-top: 5vw;
         margin-bottom: 6vw;
-    }.nav-part2 {
-        display: none; /* Initially hide */
-        flex-direction: column; /* Stack items vertically when visible */
-        background-color: white; /* Optional for better visibility */
-        position: absolute;
-        top: 60px; /* Below the nav */
-        right: 0;
-        width: 100%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 10px 0;
-        z-index: 100;
     }
 
-    .nav-part2 h4, .nav-part2 button {
-        padding: 10px 20px;
-        text-align: center;
-    }
-
-    .content button{
+    .content button {
         padding: 3vw 6vw;
         font-size: 3.5vw;
         border-radius: 3px;
         font-weight: 600;
     }
+}
 
+/* Sign-In Form Styles */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#signInForm {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 90%;
+    max-width: 400px;
+}
+
+#signInForm h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: teal;
+}
+
+#signInForm input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#signInForm button {
+    width: 48%;
+    padding: 10px;
+    margin: 10px 1%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#signInForm .submit {
+    background: teal;
+    color: #fff;
+}
+
+#signInForm .cancel {
+    background: #ccc;
+    color: #000;
 }
